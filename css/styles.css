@@ -74,12 +74,22 @@ body {
 ========================== */
 
 .profile-img {
-    width: 450px;
-    height: 650px;
-    object-fit: cover;
+
+    width: 100%;
+    max-width: 450px;
+
+    height: auto;
+
+    object-fit: contain;
+
     border: 0;
-    border-radius: 0 !important;
-    overflow: hidden;
+
+    position: relative;
+
+    z-index: 2;
+
+    transition: .4s;
+
 }
 
 .profile-img:hover {
@@ -207,12 +217,89 @@ section h2::after {
     margin-bottom: 25px;
 }
 
+
+/* ==========================
+   REDES SOCIALES
+========================== */
+
+.social-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+}
+
+.social-btn {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 28px;
+
+    color: white;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(12px);
+
+    transition: all .3s ease;
+
+}
+
+.social-btn:hover {
+
+    transform: translateY(-5px) scale(1.08);
+
+}
+
+/* Facebook */
+
+.facebook:hover {
+
+    background: #1877f2;
+
+    box-shadow:
+        0 0 20px rgba(24, 119, 242, .6);
+
+}
+
+/* TikTok */
+
+.tiktok:hover {
+
+    background: #000;
+
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, .4);
+
+}
+
 /* ==========================
    FOOTER
 ========================== */
 
 footer {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-secondary);
 }
 
@@ -281,7 +368,7 @@ footer {
 ========================== */
 
 #particles-js {
-    position: fixed;    
+    position: fixed;
     width: 100%;
     height: 100%;
     background: #050816;
@@ -297,11 +384,9 @@ body::before {
     position: fixed;
     width: 800px;
     height: 800px;
-    background: radial-gradient(
-        circle,
-        rgba(13,110,253,0.20) 0%,
-        transparent 70%
-    );
+    background: radial-gradient(circle,
+            rgba(13, 110, 253, 0.20) 0%,
+            transparent 70%);
 
     top: -300px;
     right: -200px;
@@ -313,16 +398,16 @@ body::after {
     position: fixed;
     width: 600px;
     height: 600px;
-    background: radial-gradient(
-        circle,
-        rgba(0,255,255,0.10) 0%,
-        transparent 70%
-    );
+    background: radial-gradient(circle,
+            rgba(0, 255, 255, 0.10) 0%,
+            transparent 70%);
 
     bottom: -250px;
     left: -150px;
     z-index: -1;
 }
+
+
 
 
 /* ==========================
@@ -352,14 +437,15 @@ body::after {
     border: 4px solid #0d6efd;
     border-radius: 50%;
     left: 50%;
-    top: 38%; /* antes 50% */
+    top: 38%;
+    /* antes 50% */
 
     transform: translate(-50%, -50%);
 
     box-shadow:
         0 0 25px #0d6efd,
         0 0 60px #0d6efd,
-        0 0 120px rgba(13,110,253,.7);
+        0 0 120px rgba(13, 110, 253, .7);
 
     z-index: 1;
 }
@@ -379,6 +465,8 @@ body::after {
     }
 
 }
+
+
 
 
 /* ==========================
@@ -412,7 +500,7 @@ body::after {
     text-decoration: none;
 
     box-shadow:
-        0 8px 25px rgba(37,211,102,0.4);
+        0 8px 25px rgba(37, 211, 102, 0.4);
 
     z-index: 9999;
 
