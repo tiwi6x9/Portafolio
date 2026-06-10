@@ -203,17 +203,33 @@ section h2::after {
     border-radius: 30px;
 }
 
+.btn-outline-light {
+    padding: 10px 24px;
+    border-radius: 30px;
+}
+
 @media (max-width: 768px) {
 
     .hero .btn-primary {
 
         width: 100%;
 
-        max-width: 300px;
+        max-width: 250px;
 
-        margin-bottom: 15px;
+        margin-bottom: 13px;
 
     }
+
+    .hero .btn-outline-light {
+        
+        display: none;
+
+
+
+
+    }
+
+
 
 }
 
