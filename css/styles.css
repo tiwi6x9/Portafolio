@@ -212,24 +212,13 @@ section h2::after {
 
     .hero .btn-primary {
 
-        width: 100%;
-
-        max-width: 250px;
-
-        justify-content: center;
-
-        margin-bottom: 15px;
+        display: none;
 
     }
 
     .hero .btn-outline-light {
 
-        width: 100%;
-
-        max-width: 190px;
-
-        margin-bottom: 30px;
-
+        display: none;
 
 
 
