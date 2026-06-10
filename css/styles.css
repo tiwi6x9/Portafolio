@@ -59,7 +59,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 5rem;
+    font-size: clamp(2rem, 6vw, 5rem);
     font-weight: 800;
 }
 
@@ -199,8 +199,22 @@ section h2::after {
 ========================== */
 
 .btn-primary {
-    padding: 12px 28px;
+    padding: 10px 24px;
     border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .hero .btn-primary {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        margin-bottom: 15px;
+
+    }
+
 }
 
 .btn-success {
@@ -349,6 +363,7 @@ footer {
         margin-top: 40px;
     }
 
+
 }
 
 @media (max-width: 576px) {
@@ -377,49 +392,10 @@ footer {
     left: 0;
 }
 
-/* Efecto de brillo tecnológico */
-
-body::before {
-    content: '';
-    position: fixed;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle,
-            rgba(13, 110, 253, 0.20) 0%,
-            transparent 70%);
-
-    top: -300px;
-    right: -200px;
-    z-index: -1;
-}
-
-body::after {
-    content: '';
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle,
-            rgba(0, 255, 255, 0.10) 0%,
-            transparent 70%);
-
-    bottom: -250px;
-    left: -150px;
-    z-index: -1;
-}
-
-
-
 
 /* ==========================
    EFECTO FOTO DE PERFIL
 ========================== */
-
-
-
-.profile-img {
-    position: relative;
-    z-index: 2;
-}
 
 .col-lg-6.text-center {
     position: relative;
@@ -464,6 +440,22 @@ body::after {
         transform: translate(-50%, -50%) scale(1);
     }
 
+}
+
+
+/* RESPONSIVE DEL HALO */
+
+@media (max-width: 992px) {
+
+    .col-lg-6.text-center::before {
+
+        width: 280px !important;
+
+        height: 280px !important;
+
+        top: 42%;
+
+    }
 }
 
 
