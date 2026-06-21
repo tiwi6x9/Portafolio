@@ -319,6 +319,15 @@ section h2::after {
 
 }
 
+.github:hover {
+
+    background: #050505;
+
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, .4);
+
+}
+
 /* ==========================
    FOOTER
 ========================== */
@@ -521,3 +530,6 @@ footer {
 
     color: white;
 }
+
+
+
